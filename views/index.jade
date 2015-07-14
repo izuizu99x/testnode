@@ -1,0 +1,48 @@
+extends layout
+
+block stylesheets
+	link(rel='stylesheet', href='/stylesheets/vwindex.css')
+
+block scripts
+	script(src='/javascripts/vwindex.js')
+
+block content
+	h1= title
+	p Welcome to #{title}
+	div(class='tabtop', id='ulSignInOrUp')
+		ul
+			li
+				a(href='#tabSignIn') Sign in
+			li
+				a(href='#tabSignUp') Sign up
+		div(id='tabSignIn')
+			div(class='dsptbl')
+				div(class='dsptbltitle')
+					p ユーザーID
+				div(class='dsptblcontent')
+					input(type='text', id='txtUser')
+			div(class='dsptbl fullW')
+				div(class='dsptbltitle')
+					p パスワード
+				div(class='dsptblcontent')
+					input(type='password', id='txtPass')
+				div(class='dsptblcontent floR')
+					input(type='button', id='btnSignIn', value='Sign in')
+		div(id='tabSignUp')
+			div(class='dsptbl')
+				div(class='dsptbltitle')
+					p ユーザーID
+				div(class='dsptblcontent')
+					input(type='text', id='txtUserUp')
+			div(class='dsptbl')
+				div(class='dsptbltitle')
+					p パスワード
+				div(class='dsptblcontent')
+					input(type='password', id='txtPassUp')
+			div(class='dsptbl fullW')
+				div(class='dsptbltitle')
+					p パスワード確認
+				div(class='dsptblcontent')
+					input(type='password', id='txtPassUpConfirm')
+				div(class='dsptblcontent floR')
+					input(type='button', id='btnSignUp', value='Sign up')

@@ -1,0 +1,26 @@
+/* stylesheet */
+.tabtop {
+	clear: both;
+	width: 100%;
+}
+
+.fullW {
+	width: 100%;
+}
+
+.dsptbl {
+	display: table;
+}
+
+.dsptbltitle {
+	display: table-cell;
+	width: 140px;
+}
+
+.dsptblcontent {
+	display: table-cell;
+}
+
+.floR {
+	float: right;
+}
