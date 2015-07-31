@@ -9,40 +9,45 @@ block scripts
 block content
 	h1= title
 	p Welcome to #{title}
-	div(class='tabtop', id='ulSignInOrUp')
+	div(id='ulSignInOrUp')
 		ul
 			li
 				a(href='#tabSignIn') Sign in
 			li
 				a(href='#tabSignUp') Sign up
 		div(id='tabSignIn')
-			div(class='dsptbl')
-				div(class='dsptbltitle')
+			div(class='row')
+				div(class='col-md-2')
 					p ユーザーID
-				div(class='dsptblcontent')
+				div(class='col-md-2')
 					input(type='text', id='txtUser')
-			div(class='dsptbl fullW')
-				div(class='dsptbltitle')
+			div(class='row')
+				div(class='col-md-2')
 					p パスワード
-				div(class='dsptblcontent')
+				div(class='col-md-2')
 					input(type='password', id='txtPass')
-				div(class='dsptblcontent floR')
+				div(class='col-md-2 pull-right')
 					input(type='button', id='btnSignIn', value='Sign in')
 		div(id='tabSignUp')
-			div(class='dsptbl')
-				div(class='dsptbltitle')
+			div(class='row')
+				div(class='col-md-2')
 					p ユーザーID
-				div(class='dsptblcontent')
+				div(class='col-md-2')
 					input(type='text', id='txtUserUp')
-			div(class='dsptbl')
-				div(class='dsptbltitle')
+			div(class='row')
+				div(class='col-md-2')
+					p メールアドレス
+				div(class='col-md-2')
+					input(type='text', id='txtEmailUp')
+			div(class='row')
+				div(class='col-md-2')
 					p パスワード
-				div(class='dsptblcontent')
+				div(class='col-md-2')
 					input(type='password', id='txtPassUp')
-			div(class='dsptbl fullW')
-				div(class='dsptbltitle')
+			div(class='row')
+				div(class='col-md-2')
 					p パスワード確認
-				div(class='dsptblcontent')
+				div(class='col-md-2')
 					input(type='password', id='txtPassUpConfirm')
-				div(class='dsptblcontent floR')
+				div(class='col-md-2 pull-right')
 					input(type='button', id='btnSignUp', value='Sign up')
