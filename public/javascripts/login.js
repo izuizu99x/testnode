@@ -28,6 +28,10 @@ var Login = (function () {
 	}
 
 	function _signUp(uid, pwd, email) {
+		// 操作ブロック
+		$.blockUI();
+
+		// サインアップ処理
 		$.ajax({
 			url: '/users/signup/',
 			type: 'POST',
@@ -38,10 +42,18 @@ var Login = (function () {
 			},
 			timeout: 10000
 		}).done(function (data, status, xhr) {
-			alert(data);
+			// サインアップ正常応答
+			$.unblockUI({
+				onUnblock: function(){ alert(data); } 
+			});			
 		}).fail(function (xhr, status, error) {
-			alert(xhr.status + ':' + xhr.statusText);
-			alert(status + ':' + error);
+			// サインアップ異常終了
+			$.unblockUI({
+				onUnblock: function(){
+					alert(xhr.status + ':' + xhr.statusText);
+					alert(status + ':' + error);
+				}
+			});			
 		});
 	}
 

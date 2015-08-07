@@ -18,4 +18,12 @@ $(document).ready(function() {
 			alert('Password is not match.');
 		}
 	});
+
+	// ラベル設定
+	$('.tnLabel').each(function () {
+		$(this).LabelUtil();
+	});
+
+	// blockui設定
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 });

@@ -8,10 +8,12 @@ html
 		block stylesheets
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
 		script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.61.0-2013.06.06/jquery.blockUI.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
 		script
 			$.fn.btn = $.fn.button.noConflict();
 		script(src='/javascripts/login.js')
+		script(src='/javascripts/labelUtil.js')
 		block scripts
 	body
 		block content
