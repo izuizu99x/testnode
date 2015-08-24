@@ -13,10 +13,7 @@
 		timeout: 10000
 	}).done(function (data, status, xhr) {
 		var response = $.parseJSON(data);
-		alert(response.result + ":" + response.data.length);
-
 		if (response.result == 'OK' && response.data.length > 0) {
-			alert(response.targetId + ':' + response.data[0].label);
 			$('#' + response.targetId).text(response.data[0].label);
 		}
 	}).fail(function (xhr, status, error) {

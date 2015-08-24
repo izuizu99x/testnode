@@ -1,34 +1,14 @@
 var express = require('express');
 var router = express.Router();
-
-var model = require('../models/user');
-var User = model.User;
+var controller = require('../controllers/user');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-	res.send('respond with a resource');
-});
+router.get('/', controller.getUsers);
 
 /* login. */
-router.post('/login', function(req, res, next) {
-	console.log(req.body)
-	res.send('{result: "OK"}');
-});
+router.post('/login', controller.login);
 
-/* login. */
-router.post('/signup', function(req, res, next) {
-	console.log(req.body)
-	var newUser = new User(req.body);
-	newUser._id = req.body.uid;
-	newUser.save(function(err){
-		if(err){
-			console.log(err);
-			res.send('{result: "NG"}');
-		}
-		else {
-			res.send('{result: "OK"}');
-		}
-	});
-});
+/* sign up. */
+router.post('/signup', controller.signup);
 
 module.exports = router;

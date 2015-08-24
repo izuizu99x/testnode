@@ -3,7 +3,8 @@
   "description": "test project for node.js",
   "version": "0.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "node --debug-brk ./bin/www"
   },
   "repository": {
     "type": "git",
