@@ -1,4 +1,6 @@
-/* labelDialog */
+//
+// ラベルダイアログスクリプト
+//
 $(document).ready(function() {
 	// ポジションニング
 	$('#idLblCell').position({

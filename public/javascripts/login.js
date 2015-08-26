@@ -1,4 +1,6 @@
-/* login */
+//
+// ログイン制御オブジェクト
+//
 var Login = (function () {
 	var _login = false;
 	var _loginToken = null;

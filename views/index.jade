@@ -1,10 +1,13 @@
+//-
+//- トップページ
+//-	
 extends layout
 
 block stylesheets
-	link(rel='stylesheet', href='/stylesheets/vwindex.css')
+	link(rel='stylesheet', href='/stylesheets/index.css')
 
 block scripts
-	script(src='/javascripts/vwindex.js')
+	script(src='/javascripts/index.js')
 
 block content
 	h1= title
@@ -20,12 +23,12 @@ block content
 		div(id='tabSignIn')
 			div(class='row')
 				div(class='col-md-2')
-					p ユーザーID
+					span(id='index_userid', class='tnLabel') ユーザーID
 				div(class='col-md-2')
 					input(type='text', id='txtUser')
 			div(class='row')
 				div(class='col-md-2')
-					p パスワード
+					span(id='index_password', class='tnLabel') パスワード
 				div(class='col-md-2')
 					input(type='password', id='txtPass')
 				div(class='col-md-2 pull-right')
@@ -33,22 +36,22 @@ block content
 		div(id='tabSignUp')
 			div(class='row')
 				div(class='col-md-2')
-					p ユーザーID
+					span(id='index_userid', class='tnLabel') ユーザーID
 				div(class='col-md-2')
 					input(type='text', id='txtUserUp')
 			div(class='row')
 				div(class='col-md-2')
-					p メールアドレス
+					pspan(id='index_email', class='tnLabel') メールアドレス
 				div(class='col-md-2')
 					input(type='text', id='txtEmailUp')
 			div(class='row')
 				div(class='col-md-2')
-					p パスワード
+					span(id='index_password', class='tnLabel') パスワード
 				div(class='col-md-2')
 					input(type='password', id='txtPassUp')
 			div(class='row')
 				div(class='col-md-2')
-					p パスワード確認
+					span(id='index_pwdconf', class='tnLabel') パスワード確認
 				div(class='col-md-2')
 					input(type='password', id='txtPassUpConfirm')
 				div(class='col-md-2 pull-right')

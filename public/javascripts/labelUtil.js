@@ -1,3 +1,6 @@
+//
+// ラベルユーティリティスクリプト
+//
 (function( $ ) {
   $.fn.LabelUtil = function() {
   	// デフォルトテキスト設定
@@ -16,6 +19,9 @@
 		if (response.result == 'OK' && response.data.length > 0) {
 			$('#' + response.targetId).text(response.data[0].label);
 		}
+		else {
+			alert(response.result);
+		}
 	}).fail(function (xhr, status, error) {
 		alert(xhr.status + ':' + xhr.statusText);
 		alert(status + ':' + error);
@@ -23,8 +29,7 @@
 
 	// イベントバインド
 	this.click(function (e) {
-		if (event.shiftKey) {
-			//alert('Click!');
+		if (event.shiftKey && event.altKey) {
 			var ww = window.innerWidth;
 			var wh = window.innerHeight;
 			var dw = 400;

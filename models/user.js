@@ -1,8 +1,10 @@
-/* User */
+//
+// ユーザーオブジェクトモデル
+//
 var mongoose = require('mongoose');
-var db  = require('../db/db').db;
+var db  = require('../db/db');
 
-// Modelの定義
+// スキーマの定義
 var UserSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.String,
 	uid: String,
@@ -13,4 +15,16 @@ var UserSchema = new mongoose.Schema({
     logintoken: String
 },{collection: 'userinfo'});
 
-exports.User = db.model('User', UserSchema);
+// モデルオブジェクトのエクスポート
+module.exports = {
+	'User': function (next) {
+		var connection = db.dbConnection(function (err) {
+			if (err) {
+				next(err);
+			}
+			else {
+				next(null, connection.model('User', LabelUtilSchema));
+			}
+		});
+	}
+};

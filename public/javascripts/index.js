@@ -1,4 +1,7 @@
-/* login */
+//
+// トップページスクリプト
+//
+var labelView;
 $(document).ready(function() {
 	$('#ulSignInOrUp').tabs();
 	$('#btnSignIn').button().click(function (event) {

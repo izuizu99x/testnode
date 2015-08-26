@@ -1,3 +1,6 @@
+//-
+//- レイアウト
+//-	
 doctype html
 html
 	head
@@ -10,8 +13,9 @@ html
 		script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.61.0-2013.06.06/jquery.blockUI.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
-		script
-			$.fn.btn = $.fn.button.noConflict();
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone-min.js')
+		script $.fn.btn = $.fn.button.noConflict();
 		script(src='/javascripts/login.js')
 		script(src='/javascripts/labelUtil.js')
 		block scripts
